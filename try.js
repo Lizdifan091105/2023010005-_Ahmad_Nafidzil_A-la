@@ -1,4 +1,4 @@
-alert ("hall0")
+alert ("selamat datang ")
 
 alert ("mohon isi data diri anda ")
 let nama = prompt("Masukkan Nama Anda ")
