@@ -2,10 +2,21 @@ body {
   background-color:aquamarine;
 }
 .navigatorbar{
-  background-color: crimson;
- ;
+  background-color: green;
+  width:20%px;
+  height:100%px;
+  display:flex;
+
+ 
 }
 .bar{
+
   background-color:azure;
+  list-style-type: none;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
   
 }
