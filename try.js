@@ -1,4 +1,5 @@
 alert ("hall0")
+
 alert ("mohon isi data diri anda ")
 let nama = prompt("Masukkan Nama Anda ")
 let usia = prompt("Masukkan Usia Anda ")
