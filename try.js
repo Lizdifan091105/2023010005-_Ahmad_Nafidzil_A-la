@@ -6,4 +6,4 @@ let tinggiBadan = prompt ("Masukkan tinggi badan ")
 let jenisKelamin = prompt ("masukan jenis kelamin ")
 
 
-Alert (`Nama Anda adalah ${nama} usia anda adalah ${usia} Tahun tinggi badan anda adalah ${tinggiBadan} cm jenis kelamin anda adalah ${jenisKelamin}`)
+alert (`Nama Anda adalah ${nama} usia anda adalah ${usia} Tahun tinggi badan anda adalah ${tinggiBadan} cm jenis kelamin anda adalah ${jenisKelamin}`)
