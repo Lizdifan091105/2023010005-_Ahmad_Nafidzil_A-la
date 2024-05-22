@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nam=['Andri','Andre','Yusuf ','Nuril']
+        document.write(`<p>Array  Nama = [${nam}]</p>`)
+        let ho=['Bermain Game','Menonton','Membaca','Menulis']
+        document.write(`<p>Array  Hobi =[${ho}]</p>`)
+
+        document.write('<li> menggunakan metode push pada Array Nama</li>')
+        nam.push('Ibnu')
+        document.write ('<p>outputnya</p>')
+        document.write (`<p>Array  Nama = [ ${nam} ]</p>`)
+
+        document.write('<li> menggunakan metode pop() pada Array Nama</li>')
+        nam.pop()
+        document.write ('<p>outputnya</p>')
+        document.write (`<p>Array  Nama = [ ${nam} ]</p>`)
+
+        document.write('<li> menggunakan metode shift() pada Array Hobi</li>')
+        ho.shift()
+        document.write ('<p>outputnya</p>')
+        document.write (`<p>Array  Nama = [ ${ho} ]</p>`)
+
+        document.write('<li> menggunakan metode unshift() pada Array Hobi</li>')
+        ho.unshift('Bermain Game')
+        document.write ('<p>outputnya</p>')
+        document.write (`<p>Array  Nama = [ ${ho} ]</p>`)
+        
+        document.write('<li> menggunakan keyword delete pada Array Nama pada Indeks ke 3</li>')
+        delete nam[3];
+        document.write ('<p>outputnya</p>')
+        document.write (`<p>Array  Nama = [ ${nam} ]</p>`)
+
+        document.write('<li> menggunakan metode splice() pada Array Hobi untuk menghapus indeks ke 1 sebanya 2 elemen</li>')
+        ho.splice(1,2)
+        document.write ('<p>outputnya</p>')
+        document.write (`<p>Array  Nama = [ ${ho} ]</p>`)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

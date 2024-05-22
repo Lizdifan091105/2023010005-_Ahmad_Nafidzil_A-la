@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- program -->
+    <h2> program mengunakan logical operator  dua perbandingan mengunakan angka untuk menentukan nilai true atau false</h2>
+    <script>
+        
+        alert("program mengunakan logical operator dua perbandin gan menggunakan angka untuk menentukkan nilai true atau false ")
+        // input 
+        alert ('perbandingan pertama')
+        let logika1 = parseFloat(prompt('masukkan nilai pertama pada perbandingan ke-1 : '))
+        document.write( '<h3>perbandingan pertama </h3>')
+        document.write( `<h3>nilai pertama pada perbandingan ke 1 : ${logika1} </h3>`)
+
+        let oper    = prompt('masukan operator perbandingan (= , < , <= , == , != ,> , >=')
+        document.write( `<h3>operator yang digunakan ${oper} </h3>`)
+
+        let logika2 = parseFloat(prompt('masukkan nilai kedua pada perbandingan ke-1 : '))
+        document.write( `<h3>nilai pertama pada perbandingan ke 1 : ${logika2}}</h3>`)
+
+
+        alert ('perbandingan kedua')
+
+        let logika3 = parseFloat(prompt('masukkan nilai pertama pada perbandingan ke-2 : '))
+        document.write( `<h3>nilai pertama pada perbandingan ke 2 : ${logika3}}</h3>`)
+        let oper1   = prompt('masukan operator perbandingan ke 2 (= , < , <= , == , != ,> , >=')
+        document.write( `<h3>operator yang digunakan ${oper1} </h3>`)
+
+
+
+        let logika4 = parseFloat(prompt('masukkan nilai kedua pada perbandingan ke-2 : '))
+        document.write( `<h3>nilai kedua pada perbandingan ke 2: ${logika4}}</h3>`)
+
+        let logic =prompt ('masukan operator logika yang digunakan ( && , || , !)')
+        document.write( `<h3>operator yang digunakan :  ${logic} </h3>`)
+
+        let point;
+        let point1;
+        let opt;
+        document.write('<h3> ------MENENTUKAN NILAI PERBANDINGAN PERTAMA------ </h3>')
+
+        // perbandingan ke 1
+        switch (oper){
+            case '=' :
+                point= logika1 = logika2
+                document.write (`<h3>perbandingan pertama :   ${logika1} = ${logika2} </h3>`)
+                document.write(`<h3>perbandinga pertama bernilai : ${point}</h3>`)
+                break;
+        
+            case '==' :
+                point= logika1 == logika2
+                document.write (`<h3>perbandingan pertama :   ${logika1} == ${logika2} </h3>`)
+                document.write(`<h3>perbandinga pertama bernilai : ${point}</h3>`)
+                break;
+            case '<' :
+                point= logika1 < logika2
+                document.write (`<h3>perbandingan pertama :   ${logika1} < ${logika2} </h3>`)
+                document.write(`<h3>perbandinga pertama bernilai : ${point}</h3>`)
+                break;
+            case '<=' :
+                point= logika1 <= logika2
+                document.write (`<h3>perbandingan pertama :   ${logika1} <= ${logika2} </h3>`)
+                document.write(`<h3>perbandinga pertama bernilai : ${point}</h3>`)
+                break;
+            case '>' :
+                point= logika1 > logika2
+                document.write (`<h3>perbandingan pertama :   ${logika1} > ${logika2} </h3>`)
+                document.write(`<h3>perbandinga pertama bernilai : ${point}</h3>`)
+                break;
+                case '>=' :
+                point= logika1 >= logika2
+                document.write (`<h3>perbandingan pertama :   ${logika1} >= ${logika2} </h3>`)
+                document.write(`<h3>perbandinga pertama bernilai : ${point}</h3>`)
+                break;
+            case '!=' :
+                point= logika1 != logika2
+                document.write (`<h3>perbandingan pertama :   ${logika1} != ${logika2} </h3>`)
+                document.write(`<h3>perbandinga pertama bernilai : ${point}</h3>`)
+                break;
+            default :
+                document.write(' mohon masukan operator perbandingan sesuai ketentuan')
+        
+        }
+        document.write('<h3> ------MENENTUKAN NILAI PERBANDINGAN KEDUA------ </h3>')
+
+        
+        //perbandingan ke 2
+        switch (oper1){
+            case '=' :
+                point1= logika3 = logika4
+                document.write (`<h3>perbandingan kedua :   ${logika3} = ${logika4} </h3>`)
+                document.write(`<h3>perbandinga kedua bernilai : ${point1}</h3>`)
+                break;
+            case '==' :
+                point1= logika3 == logika4
+                document.write (`<h3>perbandingan kedua :   ${logika3} == ${logika4} </h3>`)
+                document.write(`<h3>perbandinga kedua bernilai : ${point1}</h3>`)
+                break;
+            case '<' :
+                point1= logika3 < logika4
+                document.write (`<h3>perbandingan kedua :   ${logika3} < ${logika4} </h3>`)
+                document.write(`<h3>perbandinga kedua bernilai : ${point1}</h3>`)
+                break;
+            case '<=' :
+                point1= logika3 <= logika4
+                document.write (`<h3>perbandingan kedua :   ${logika3} <= ${logika4} </h3>`)
+                document.write(`<h3>perbandinga kedua bernilai : ${point1}</h3>`)
+                break;
+            case '>' :
+                point1= logika3 > logika4
+                document.write (`<h3>perbandingan kedua :   ${logika3} > ${logika4} </h3>`)
+                document.write(`<h3>perbandinga kedua bernilai : ${point1}</h3>`)
+                break;
+            case '>=' :
+                point1= logika3 >= logika4
+                document.write (`<h3>perbandingan kedua :   ${logika3} >= ${logika4} </h3>`)
+                document.write(`<h3>perbandinga kedua bernilai : ${point1}</h3>`)
+                break;
+            case '!=' :
+                point1= logika3 != logika4
+                document.write (`<h3>perbandingan kedua :   ${logika3} != ${logika4} </h3>`)
+                document.write(`<h3>perbandinga kedua bernilai : ${point1}</h3>`)
+                break;
+                default :
+                document.write(' mohon masukan operator perbandingan sesuai ketentuan')
+                break;
+            
+        }
+        document.write('<h3>-----Hasil perbandingan antara kedua -----</h3>')
+
+        // menghitung boleean menggunakan 
+        switch (logic){
+            case '&&':
+                opt = point && point1
+                document.write (`<h3> perbandingan hasil antara kedua perbandingan :  ${point}  &&  ${point1}</h3>`)
+                document.write(`<h3> hasil perbandingan  antara kedua  menggunakan operator logic ${logic} bernilai : ${opt}</h3>`)
+                break;
+            case '||':
+                opt = point || point1
+                document.write (`<h3> perbandingan hasil antara kedua perbandingan :  ${point}  ||  ${point1}</h3>`)
+                document.write(`<h3> hasil perbandingan  antara kedua  menggunakan operator logic ${logic} bernilai : ${opt}</h3>`)
+                break;
+            case '!':
+                
+                
+                opt = !(point = point1)
+                document.write (`<h3> perbandingan hasil antara kedua perbandingan :   !(  ${point}  =  ${point1})<h3>`)
+                document.write(`<h3> hasil perbandingan  antara kedua  menggunakan operator logic (${logic}) bernilai : ${opt}</h3>`)
+                break;
+            default :
+                document.write(' mohon masukan operator logic sesuai ketentuan')
+                break;
+            
+
+
+        }
+
+        
+
+    </script>
+</body>
+</html>

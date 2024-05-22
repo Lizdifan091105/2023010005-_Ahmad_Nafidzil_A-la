@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let aritma= parseFloat(prompt('Masukan suku pertama Aritmatika'))
+        document.write(`<p> Suku pertama : ${aritma} </p>`)
+        let aritma1= parseFloat(prompt('Masukan suku yang terakhir Aritmatika'))
+        document.write(`<p> Suku terakhir : ${aritma1} </p>`)
+
+        let beda= parseFloat(prompt('Masukan nilai beda/selisih (nilai yang merupakan hasil pengurangan suku ke 2 dengan  suku ke1)'))
+        document.write(`<p> selisih/beda : ${beda} </p>`)
+
+        document.write(aritma)
+        do {
+            aritma= aritma+beda
+            
+            document.write(`<p>${aritma}</p>`)
+        } while (aritma<(aritma1-beda) && (aritma1-beda)>aritma)
+
+        
+        
+    </script>
+</body>
+</html>

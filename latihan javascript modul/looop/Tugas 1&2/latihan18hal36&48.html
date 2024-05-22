@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>---Menentukan Nilai---</h1>
+    <script>
+        //input
+        score = parseInt(prompt ('masukkan score :'))
+        console.log(score)
+        document.write(`<p> Nilai score : ${score}`)
+        let result;
+        // pengevaluasian dan output
+        if (score >=90 && score <=100){
+             result ="Selamat!Anda mendapatkan nilai A"
+        }
+        if (score >=80 && score <=89){
+            result ="Anda mendapatkan nilai B"
+        }
+        if (score >=70 && score <=79){
+             result ="Anda mendapatkan nilai C"
+        }
+        if (score >=60 && score <=69){
+             result ="Anda mendapatkan nilai D"
+        }
+        if (score >=0 && score <=59){
+             result ="Anda mendapatkan nilai E "
+        }
+        else {
+            result ="Mohon isi score dengan benar (0-100)"
+
+        }
+        console.log(result)
+        document.write(`<p>${result}</p>`)
+
+    </script>
+</body>
+</html>

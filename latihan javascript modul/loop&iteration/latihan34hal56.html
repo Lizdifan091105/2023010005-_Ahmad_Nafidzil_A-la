@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  welll = prompt ('Masukan Angka pertama (0-100)')
+        document.write( `<p> Nilai pertama  : ${welll}</p>`)
+        let  fws = parseFloat(prompt ('Masukan Angka terakhir(0-100)'))
+        document.write( `<p> Nilai kedua  : ${fws}</p>`)
+        let  qw = parseFloat(prompt ('Masukkan angka yang tidak ingin ditampilkan  :'))
+        document.write( `<p>  Angka yang tidak ingin ditampilkan  : ${qw}</p>`)
+        
+        if(welll<fws){
+            let ws = parseFloat(welll)
+            for (ws; ws<(fws+1); ws++){
+            if( ws ==qw) 
+            continue;
+        //outputnya akan terbatas sampai 1oo walaupun di input lebih dari 100
+        document.write( `<p>  ${ws}</p>`)
+
+            }
+        }
+        else if(welll>fws){
+            document.write( `<p> Data yang ditampilkan hanya adalah nilai dari terkecil ke terbesar</p>`)
+            document.write( `<p> Mohon Input dengan nilai pertama terkecil dan input nilai terakhir adalah nilai terbesar (0-100)</p>`)
+
+
+        }
+        else {
+            document.write( `<p> data yang anda masukkan bukan merupakan  Number </p>`)
+
+        }
+
+       
+    </script>
+</body>
+</html>

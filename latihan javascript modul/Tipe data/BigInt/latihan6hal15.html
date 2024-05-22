@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // notasi bigInt
+        let big1= 40n
+        document.write(`<li> nilai Pertama ${big1}</li>`)
+        let big2= 25n
+        document.write(`<li> nilai Kedua ${big2}</li>`)
+
+        // menampilkan jenis type data
+        let biga=(typeof(big1))
+        document.write("type data dari kedua nilai ")
+        document.write(`<li> ${biga}</li>`)
+        let bigb=(typeof(big2))
+        document.write(`<li> ${bigb}</li>`)
+        document.write(`operasi artmatika di BigInt`)
+        let jumlah=big1+big2
+        document.write(`<li> penjumlahan dari kedua nilai ${jumlah}</li>`)
+        let kurang=big1-big2
+        document.write(`<li> pengurangan dari kedua nilai ${kurang}</li>`)
+        let kali=big1*big2
+        document.write(`<li> perkalian dari kedua nilai ${kali}</li>`)
+        let bagi=big1/big2
+        document.write(`<li> pembagian dari kedua nilai ${bagi}</li>`)
+        let hasilbagi=big1%big2
+        document.write(`<li> hasil bagi dari kedua nilai ${hasilbagi}</li>`);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

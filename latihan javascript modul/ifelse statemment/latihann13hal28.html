@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a= 2
+        document.write(`<p> nilai pertama =${a}</p>`)
+        let b=5
+        document.write(`<p> nilai kedua =${b}</p>`)
+        operator= '*'
+        document.write(`<p> operasi yang digunakan=${operator}</p>`)
+        switch(operator){
+            case '+':
+                hasil=a+b
+                break;
+            case '-':
+                hasil=a-b
+                break;
+            case '*':
+                hasil=a*b
+                break;
+            case '/':
+                hasil=a/b
+                break;
+            default:
+                hasil= 'input tidak valid'
+                break;
+        }
+            document.write(`<p> hasil = ${hasil}</p>`)
+    </script>
+</body>
+</html>

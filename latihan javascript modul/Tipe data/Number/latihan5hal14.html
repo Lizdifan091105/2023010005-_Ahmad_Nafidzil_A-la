@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=prompt('masukkan nilai pertama')
+        document.write(`<li>nilai pertama ${x}</li>`)
+        let y=prompt('masukkan ilai kedua')
+        document.write(`<li>nilai kedua ${y}</li>`)
+
+        //menampilkan jenis type data masing masing variabel
+        let xa=(typeof(x))
+        document.write(`<li>tipe data nilai pertama ${xa}</li>`)
+        let ya=(typeof(y))
+        document.write(`<li>tipe data nilai kedua ${ya}</li>`)
+        //operasi aritematika
+        document.write("<p>operasi aritematika</p>")
+        let penjumlahan = x+y
+        document.write(` <li>hasil penjumlahan nilai pertama dan kedua adalah ${penjumlahan}</li>`)
+        let pengurangan=x-y
+        document.write(` <li>hasil pengurangan nilai pertama dan kedua adalah ${pengurangan}</li>`)
+        let perkalian = x*y
+        document.write(` <li>hasil perkalian nilai pertama dan kedua adalah ${perkalian}</li>`)
+        let pembagian =x/y
+        document.write(` <li>hasil pembagian nilai pertama dan kedua adalah ${pembagian}</li>`)
+        let hasilbagi =x%y
+        document.write(`<li> hasil bagi nilai pertama dan kedua adalah ${hasilbagi}</li>`)
+        //operasi increment dan decrement
+        document.write('increment')
+        let increment1= ++x
+        document.write(`<li> nilai dari ++x adalah ${increment1} </li>`)
+        let increment2=x++
+        document.write(`<li> nilai dari x++ adalah ${increment2} </li>`)
+
+        document.write('decrement')
+        let decrement1= --y
+        document.write(`<li> nilai dari --y adalah ${decrement1} </li>`)
+        let decrement2= y--
+        document.write(`<li> nilai dari y--adalah ${decrement2} </li>`)
+
+
+
+    </script>
+</body>
+</html>

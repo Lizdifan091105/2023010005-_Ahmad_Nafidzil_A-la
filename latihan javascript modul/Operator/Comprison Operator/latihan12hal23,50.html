@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+<h2>PERBANDINGAN DUA NILAI APAKAH BERNILAI TRUE ATAU FALSE MENGGUNAKAN OPERATOR PERBANDINGAN </h2>
+
+    <script>
+        //program operator perbandingan  menggunakan switch case
+        alert('selamat datang di wabsite operator perbandingan untuk menentukan nilai  true atau false')
+
+        //input
+        let operasi;
+        let perbandingan= prompt(`masukan operator yang akan digunakan ( == , != , === , !== , > , >= , < , <=)`) 
+        document.write(`<h3>operator perbandingan yang digunakan : ${perbandingan}</h3>`)
+        
+
+    if (perbandingan = '===='){
+        
+         let typ= prompt (' apakah nilai pertama bernilai string? ( yes or no)')
+         let no11 = prompt ('masukkan nilai pertama :');
+         
+         
+            switch (typ){
+            case 'yes' :
+           nol = no11
+            document.write(`<h3> Nilai pertama : ${nol}</h3>`)
+
+
+            document.write(`<h3>type data nilai pertama : ${(typeof(nol))}</h3>`)
+                console.log(typeof(nol))
+            break;
+            case 'no' :            
+               document.write(`<h3> Nilai pertama1 : ${no11}</h3>`)
+
+                 nol =parseFloat( no11)
+
+                 document.write(`<h3>type data nilai pertama : ${(typeof(nol))}</h3>`)
+
+            console.log (typeof(nol));
+            break;
+        
+            default :
+            'mohon isi word yes or no dengan benar (perhatikan kapital atau tidak)'
+            break;
+        }
+    
+        //no2
+            
+            let typ1= prompt (' apakah nilai kedua bernilai string? ( yes or no)')
+            let no12  =prompt('masukkan nilai kedua : ') ;
+            let nil
+            ;
+            switch (typ1){
+            case 'yes':
+                 nil = no12
+            document.write(`<h3>nilai kedua : ${nil} </h3>`)
+            
+            document.write(`<h3>type data nilai kedua : ${(typeof(nil))}</h3>`)
+                break;
+        
+            case 'no':
+                 nil =parseFloat(no12)
+            document.write(`<h3>nilai kedua : ${nil}</h3>`)
+            document.write(`<h3>type data nilai kedua : ${(typeof(nil))}</h3>`)
+                console.log (typeof(nil))
+                break;;
+
+        
+        default :
+            'mohon isi word yes or no dengan benar (perhatikan kapital atau tidak)'
+            break;
+        }
+    
+         operasi = nol === nil
+        document.write( `<h3>Hasil perbandingan dari nilai pertama dan nilai kedua adalah bernilai ${operasi} </h3`);
+        }
+        
+        
+
+    
+    
+    
+    // no1
+    else if (perbandingan = "!=="){
+        
+        
+
+         
+        let typ12= prompt (' apakah nilai pertama bernilai string? ( yes or no)')
+        let no13 =prompt ('nilai pertama :')
+        let no14;
+        switch (typ12){
+
+        case 'yes':
+           let no14=no13
+           document.write(`<h3>nilai pertama : ${no14}</h3>`)
+
+           document.write(`<h3>type data nilai pertama : ${(typeof(no14))}</h3>`)
+
+           break;
+        
+        case'No':
+        document.write(`<h3>nilai kedua : ${no13}</h3>`)
+
+            no14=parseFloat(no13)
+            document.write(`<h3>type data nilai pertama: ${(typeof(no14))}</h3>`)
+
+                    break;
+        
+        default :
+            'mohon isi word yes or no dengan benar (perhatikan kapital atau tidak)'
+            break;
+            }
+    // no2
+        let no22 = prompt ('nilai kedua :')
+
+        let typa= prompt (' apakah nilai pertama bernilai string? ( yes or no)')
+        let noa
+        switch (typa){
+        case  'yes':
+        document.write(`<h3>nilai kedua : ${no22}</h3>`)
+
+            noa=no22
+            document.write(`<h3>type data nilai kedua : ${(typeof(noa))}</h3>`)
+
+                break;
+        
+        case'no' :        
+
+        document.write(`<h3>nilai kedua : ${no22} </h3>`)
+           
+            noa=parseFloat(no22)
+            document.write(`<h3>type data nilai kedua : ${(typeof(noa))}</h3>`)
+
+                break;
+        
+        default:
+            'mohon isi word yes or no dengan benar (perhatikan kapital atau tidak)'
+            break;
+        }
+       let operasi= no14 !== noa
+        document.write( 'Hasil perbandingan dari nilai pertama dan nilai kedua adalah bernilai '+operasi);
+        
+    }
+    
+     
+else{
+
+        
+        no1=parseFloat(prompt('masukkan nilai pertama'))
+        no2=parseFloat(prompt('masukkan nilai kedua'))
+
+
+        document.write(`<h3> Nilai pertama : ${no1}</h3>`)
+        document.write(`<h3> Nilai kedua : ${no2}</h3>`)
+        //switch
+        if (perbandingan = "=="){
+           operasi= no1==no2
+           console.log(operasi)
+           document.write( 'Hasil perbandingan dari nilai pertama dan nilai kedua adalah bernilai '+operasi)
+        }
+        else if (perbandingan = "!="){
+           operasi= no1 != no2
+           console.log(operasi)
+           document.write( 'Hasil perbandingan dari nilai pertama dan nilai kedua adalah bernilai '+operasi)
+        }
+        else if (perbandingan = ">"){
+           operasi= no1>no2
+           console.log(operasi)
+           document.write( 'Hasil perbandingan dari nilai pertama dan nilai kedua adalah bernilai '+operasi)
+        }
+        else if (perbandingan = ">="){
+           operasi= no1>=no2
+           console.log(operasi)
+           document.write( 'Hasil perbandingan dari nilai pertama dan nilai kedua adalah bernilai '+operasi)
+        }
+        else if (perbandingan = "<"){
+           operasi= no1<no2
+           console.log(operasi)
+           document.write( 'Hasil perbandingan dari nilai pertama dan nilai kedua adalah bernilai '+operasi)
+        }
+        else if (perbandingan = "<="){
+           operasi= no1<=no2
+           console.log(operasi)
+           document.write( 'Hasil perbandingan dari nilai pertama dan nilai kedua adalah bernilai '+operasi)
+        }
+        else {
+            document.write ('operator perbandingan tidak valid')
+        }
+    
+    }
+
+
+
+    </script>
+
+</body>
+</html>
