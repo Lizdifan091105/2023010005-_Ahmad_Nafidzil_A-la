@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+    <form action="">
+    <h1> Nilai Mahasiswa</h1>
+    <script src="nilai.js"></script>
+    
+    <form id="format">
+        <!-- input NIM -->
+        <label for="nim">   NIM:</label>
+        <input type="nim" id="nim" name="nim" ><br><br>
+    <!--input nama  -->
+        <label for="nama">  Nama:</label>
+        <input type="text" id="nama"><br><br>
+    <!--input mata kuliah  -->
+        <label for="matkul">Mata Kuliah:</label>
+        <select id="matkul" name="matkul" >
+            <option value="Pemrograman komputer 2">Pemrograman komputer  2</option>
+            <option value="diskrit">Diskrit </option>
+            <option value="Kalkulus2">Kalkulus 2</option>
+            <option value="Algoritma dan Struktur Data">Algoritma dan Struktur Data</option>
+            <option value="Desain Komputer">Desain Komputer</option>
+            <option value="Sistem Operasi">Sistem Operasi</option>
+            <option value="b.indonesia">Bahasa Indonesia</option>
+            <option value="arsitektur komputer">Arsitektur komputer</option>
+            <option value="pendidikan kwarganegaraan">Pendidikan Kwarganengaran</option>
+            <option value="Praktikum pemograman komputer">praktikum pemograman ke 2</option>
+        </select><br><br>
+        <!-- input nilai  -->
+        <label for="nilaiakhir">    Nilai :</label>
+        <input type="number" id="nilaiakhir" name="nilaiakhir" min="0" max="100"><br><br>
+        <!-- output tombol-->
+        <button type="button" onclick="tampil()">TAMPILKAN</button><br>
+        <button type="reset">RESET</button>
+    </form>
+    <form hasil id="hasilakhir"></form>
+    
+</div>
+    <script src="nilai.js"></script>
+</body>
+</html>
