@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(5, 5, 117);
+}
+form{
+    border-style: double;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+button{
+    background-color: aquamarine;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+   
+    align-content: center;
+    
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+div{
+    border-style: solid;
+    margin: auto;
+    width:50%;
+    height: 60%;
+    padding: 10px;
+    font-family: sans-serif;
+    background-color:greenyellow;
+}
+h1{
+    text-align: center;
+    
+}
+input{
+    margin: auto;
+    border-style: groove;
+    width:50%;
+    height: auto;
+}
+p{
+    border-style: groove;
+}
+
+
