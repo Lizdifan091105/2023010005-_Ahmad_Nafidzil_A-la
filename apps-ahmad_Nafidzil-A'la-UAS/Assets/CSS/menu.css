@@ -69,3 +69,28 @@ button:disabled{
     background-color: #ccc;
     cursor:not-allowed;
 }
+
+button:hover:not(:disabled){
+    background-color: green;
+    transform:scale(1.05) ;
+    -webkit-transform:scale(1.05) ;
+    -moz-transform:scale(1.05) ;
+    -ms-transform:scale(1.05) ;
+    -o-transform:scale(1.05) ;
+}
+
+button:active:not(:disabled){
+    background-color: greenyellow;
+}
+
+#resetButton{
+    margin-top: 20px;
+    background-color: red;
+}
+
+#resetButton:hover:not(:disabled){
+    background-color: #e41e1c;
+}
+#resetButton:active:not(:disabled){
+    background-color: #d01817;
+}

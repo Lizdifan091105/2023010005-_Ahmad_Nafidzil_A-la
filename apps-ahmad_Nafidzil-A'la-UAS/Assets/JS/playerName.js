@@ -1,6 +1,6 @@
 document.getElementById('nameForm').addEventListener('submit', function(e){
     e.preventDefault();
-    const playerName = document.getElementById('playerName').velue;
+    const playerName = document.getElementById('playerName').value;
     localStorage.setItem('playerName',playerName)
-    windows.location.href='menu.html'
+    window.location.href='menu.html'
 })
