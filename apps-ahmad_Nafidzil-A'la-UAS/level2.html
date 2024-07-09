@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Mencocokan Gambar</title>
+  <link rel="stylesheet" href="Assets/CSS/level2.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="timer">Waktu: <span id="time">60</span> detik</div>
+    <div id="game-board" class="game-board">
+      <!-- Tempat untuk gambar yang akan dicocokkan -->
+    </div>
+    <div id="image-container" class="image-container">
+      <!-- Daftar gambar yang bisa di-drag -->
+    </div>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <p>Selamat, kamu berhasil!</p>
+      <button id="nextLevelButton">Ke Level Berikutnya</button>
+    </div>
+  </div>
+
+  <script src="Assets/JS/level2.js"></script>
+</body>
+</html>

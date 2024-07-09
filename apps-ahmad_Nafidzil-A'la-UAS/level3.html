@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menyusun Kalimat Niat Wudhu</title>
+    <link rel="stylesheet" href="Assets/CSS/level3.css">
+</head>
+<body>
+    <div id="game">
+        <div id="level1" class="level">
+            <h2>Tingkat 1</h2>
+            <p>Geser kotak di bawah ini untuk melengkapi kalimat niat wudhu:</p>
+            <div id="sentence1" class="sentence">
+                <span class="dropzone" data-answer="نَوَيْتُ"></span>
+                <span>الْوُضُوْءَ</span>
+                <span class="dropzone" data-answer="لِرَفْعِ"></span>
+                <span>الْحَدَثِ</span>
+                <span>اْلاَصْغَرِ</span>
+                <span>فَرْضًا</span>
+                <span class="dropzone" data-answer="ِللهِ"></span>
+                <span>تَعَالَى</span>
+            </div>
+            <div class="words">
+                <div class="word" draggable="true">نَوَيْتُ</div>
+                <div class="word" draggable="true">لِرَفْعِ</div>
+                <div class="word" draggable="true">ِللهِ</div>
+            </div>
+            <div class="button-container">
+                <button onclick="checkLevel1()">Koreksi</button>
+            </div>
+            <button>
+                <a href="menu.html">Kembali ke Menu</a>
+            </button>
+        </div>
+        
+        <div id="level2" class="level" style="display: none;">
+            <h2>Tingkat 2</h2>
+            <p>Geser kotak di bawah ini untuk menyusun kalimat niat wudhu:</p>
+            <div id="sentence2" class="sentence">
+                <span class="dropzone" data-answer="نَوَيْتُ"></span>
+                <span class="dropzone" data-answer="الْوُضُوْءَ"></span>
+                <span class="dropzone" data-answer="لِرَفْعِ"></span>
+                <span class="dropzone" data-answer="الْحَدَثِ"></span>
+                <span class="dropzone" data-answer="اْلاَصْغَرِ"></span>
+                <span class="dropzone" data-answer="فَرْضًا"></span>
+                <span class="dropzone" data-answer="ِللهِ"></span>
+                <span class="dropzone" data-answer="تَعَالَى"></span>
+            </div>
+            <div class="words">
+                <div class="word" draggable="true">نَوَيْتُ</div>
+                <div class="word" draggable="true">الْوُضُوْءَ</div>
+                <div class="word" draggable="true">لِرَفْعِ</div>
+                <div class="word" draggable="true">الْحَدَثِ</div>
+                <div class="word" draggable="true">اْلاَصْغَرِ</div>
+                <div class="word" draggable="true">فَرْضًا</div>
+                <div class="word" draggable="true">ِللهِ</div>
+                <div class="word" draggable="true">تَعَالَى</div>
+            </div>
+            <div class="button-container">
+                <button onclick="checkLevel2()">Koreksi</button>
+            </div>
+            <button>
+                <a href="menu.html">Kembali ke Menu</a>
+            </button>
+        </div>
+    </div>
+
+    <!-- Popup untuk melanjutkan ke level berikutnya -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p>Selamat! Anda telah menyelesaikan semua tingkat.</p>
+            <button id="nextLevelButton">Lanjut ke Level Berikutnya</button>
+        </div>
+    </div>
+
+    <script src="Assets/JS/level3.js"></script>
+</body>
+</html>
