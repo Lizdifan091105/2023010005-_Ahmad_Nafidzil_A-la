@@ -8,19 +8,19 @@ document.addEventListener('DOMContentLoaded',function(){
     const level4Button = document.getElementById('level4');
   
     level1Button.addEventListener('click',function(){
-        window.location='level1.html';
+        window.location.href='level1.html';
     })
 
     level2Button.addEventListener('click',function(){
-        window.location='level2.html';
+        window.location.href='level2.html';
     })
 
     level3Button.addEventListener('click',function(){
-        window.location='level3.html';
+        window.location.href='level3.html';
     })
 
     level4Button.addEventListener('click',function(){
-        window.location='level4.html';
+        window.location.href='level4.html';
     })
 
     const unlockedLevels= localStorage.getItem('unlockedLevels')||'1';

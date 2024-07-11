@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop Game</title>
+<link rel="stylesheet" href="Assets/CSS/level1.css">
+</head>
+<body>
+<div class="game-container">
+   <div class="question-container">
+       <div class="question">
+           <img src="Assets/Img/image1.jpg" alt="Question Image 1" class="question-img">
+       </div>
+       <div class="dropzone" id="dropzone1"></div>
+   </div>
+   <div class="question-container">
+       <div class="question">
+           <img src="Assets/Img/image2.jpg" alt="Question Image 2" class="question-img">
+       </div>
+       <div class="dropzone" id="dropzone2"></div>
+   </div>
+   <div class="image-options">
+       <img src="Assets/Img/image1.jpg" class="draggable" id="img1" draggable="true">
+       <img src="Assets/Img/image2.jpg" class="draggable" id="img2" draggable="true">
+       <img src="Assets/Img/image3.jpg" class="draggable" id="img3" draggable="true">
+       <img src="Assets/Img/image4.jpg" class="draggable" id="img4" draggable="true">
+       <!-- Add more image options as needed -->
+   </div>
+   <div id="timer">Time Left: 80</div>
+</div>
+<script src="Assets/JS/level1.js"></script>
+</body>
+</html>

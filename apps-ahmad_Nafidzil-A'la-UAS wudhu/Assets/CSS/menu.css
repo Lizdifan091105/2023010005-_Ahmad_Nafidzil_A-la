@@ -6,7 +6,7 @@ body,h1,button{
 
 body{
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    background-color: bisque;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
     display: flex;
     justify-content: center;
     align-items: center;

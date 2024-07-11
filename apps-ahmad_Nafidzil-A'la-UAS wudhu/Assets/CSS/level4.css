@@ -1,11 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-color: #f0f8ff;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
     margin: 0;
 }
 
