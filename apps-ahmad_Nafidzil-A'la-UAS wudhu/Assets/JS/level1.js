@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropzones = document.querySelectorAll('.dropzone');
     const draggables = document.querySelectorAll('.draggable');
     const timerDisplay = document.getElementById('timer');
+    const playerName = localStorage.getItem('playerName');
+    document.getElementById('playerNameDisplay').innerHTML = `Nama: ${playerName}`;
     let timeLeft = 80;
 
     let countdown = setInterval(function() {
