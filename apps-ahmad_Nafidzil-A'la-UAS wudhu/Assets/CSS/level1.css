@@ -1,4 +1,4 @@
-\body, html {
+body, html {
    margin: 0;
    padding: 0;
    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
@@ -17,7 +17,7 @@
    height: 100vh;
    padding: 20px;
    box-sizing: border-box;
-
+   
 }
 
 .grid-container {
@@ -61,15 +61,13 @@
 
 .image-options {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid for draggable images */
+   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
    grid-template-rows: auto;
    gap: 10px;
    justify-items: center;
    align-items: center;
    width: 100%;
-   /* max-width: 1200px; Max width for better responsiveness */
    height: 20%;
-   /* overflow: auto; Enable scrolling if needed */
    padding-top: 20px;
 }
 
@@ -102,6 +100,10 @@
    background-color: rgba(0, 0, 0, 0.5);
    justify-content: center;
    align-items: center;
+}
+
+.popup.show {
+   display: flex;
 }
 
 .popup-content {

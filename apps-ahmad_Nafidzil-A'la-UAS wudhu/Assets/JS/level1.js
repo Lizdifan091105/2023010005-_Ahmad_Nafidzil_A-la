@@ -1,68 +1,92 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const dropzones = document.querySelectorAll('.dropzone');
-    const draggables = document.querySelectorAll('.draggable');
-    const timerDisplay = document.getElementById('timer');
-    const playerName = localStorage.getItem('playerName');
-    document.getElementById('playerNameDisplay').innerHTML = `Nama: ${playerName}`;
-    let timeLeft = 80;
+const playerName = localStorage.getItem('playerName');
+  if (playerName) {
+    document.getElementById('playerNameDisplay').textContent = `Nama : ${playerName}`;
+  }
 
-    let countdown = setInterval(function() {
-        timeLeft--;
-        timerDisplay.textContent = `Time Left: ${timeLeft}`;
+let matchedPairs = 0;
+const totalPairs = 10;
 
-        if (timeLeft === 0) {
-            clearInterval(countdown);
-            alert('Game Over! Time is up.');
-        }
-    }, 1000);
+// Fungsi drag start
+function dragStart(event) {
+  event.dataTransfer.setData('text/plain', event.target.id);
+}
 
-    draggables.forEach(draggable => {
-        draggable.addEventListener('dragstart', function(e) {
-            e.dataTransfer.setData('text', e.target.id);
-        });
-    });
+// Fungsi drag over
+function dragOver(event) {
+  event.preventDefault();
+}
 
-    dropzones.forEach(dropzone => {
-        dropzone.addEventListener('dragover', function(e) {
-            e.preventDefault();
-        });
+// Fungsi drop
+function drop(event) {
+  event.preventDefault();
+  const id = event.dataTransfer.getData('text');
+  const draggableElement = document.getElementById(id);
+  const dropZone = event.target.closest('.dropzone');
 
-        dropzone.addEventListener('drop', function(e) {
-            e.preventDefault();
-            const draggableId = e.dataTransfer.getData('text');
-            const draggedElement = document.getElementById(draggableId);
-            
-            // Check if the dragged image matches the question image
-            const questionId = dropzone.id.replace('dropzone', '');
-            const questionImage = document.querySelector(`.question-container:nth-child(${questionId}) .question-img`).src;
+  // Cek apakah elemen drop adalah drop zone yang benar
+  if (dropZone && dropZone.dataset.match === id) {
+    dropZone.innerHTML = '';
+    dropZone.appendChild(draggableElement);
+    draggableElement.classList.add('dropped');
+    matchedPairs++;
 
-            if (draggedElement.src === questionImage) {
-                dropzone.innerHTML = ''; // Clear the dropzone
-                dropzone.appendChild(draggedElement);
-                draggedElement.style.width = '100%'; // Adjust image size to fit dropzone
-                draggedElement.style.height = '100%';
-                dropzone.style.backgroundColor = '#8bc34a'; // Green background for correct answer
-                dropzone.dataset.correct = 'true';
-            } else {
-                dropzone.style.backgroundColor = '#f44336'; // Red background for incorrect answer
-                dropzone.dataset.correct = 'false';
-            }
-
-            checkWinCondition();
-        });
-    });
-
-    function checkWinCondition() {
-        let allCorrect = true;
-        dropzones.forEach(dropzone => {
-            if (dropzone.dataset.correct !== 'true') {
-                allCorrect = false;
-            }
-        });
-
-        if (allCorrect) {
-            clearInterval(countdown);
-            alert('Congratulations! You have matched all the images correctly.');
-        }
+    // Cek apakah semua pasangan sudah ditemukan
+    if (matchedPairs === totalPairs) {
+      showPopup();
     }
-});
+  }
+}
+
+// Fungsi untuk menampilkan popup
+function showPopup() {
+  const popup = document.getElementById('popup');
+  popup.classList.add('show');
+
+  // Tambahkan event listener untuk tombol Next Level
+  document.getElementById('nextLevelButton').addEventListener('click', function() {
+    localStorage.setItem('unlockedLevels', '2'); // Mengatur level berikutnya yang terbuka
+    window.location.href = 'level2.html'; // Ganti dengan URL level berikutnya
+  });
+}
+
+// Fungsi untuk inisialisasi timer
+function startTimer(duration) {
+  let timer = duration, minutes, seconds;
+  const timeDisplay = document.getElementById('timer');
+
+  const countdown = setInterval(() => {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    timeDisplay.textContent = `Time Left: ${minutes}:${seconds}`;
+
+    if (--timer < 0) {
+      clearInterval(countdown);
+      alert("Time's up! Try again.");
+      location.reload();
+    }
+  }, 1000);
+}
+
+// Fungsi untuk inisialisasi game
+function initGame() {
+  startTimer(80); // Set timer untuk 80 detik
+
+  const images = document.querySelectorAll('.draggable');
+  images.forEach(image => {
+    image.addEventListener('dragstart', dragStart);
+  });
+
+  const dropZones = document.querySelectorAll('.dropzone');
+  dropZones.forEach(zone => {
+    zone.addEventListener('dragover', dragOver);
+    zone.addEventListener('drop', drop);
+  });
+
+}
+
+// Panggil fungsi inisialisasi game saat halaman dimuat
+document.addEventListener('DOMContentLoaded', initGame);
