@@ -32,22 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (dropzone.classList.contains('dropzone') && dropzone.innerText === '') {
             dropzone.innerText = text;
-            const draggedWord = Array.from(document.querySelectorAll('.word')).find(word => word.innerText === text);
+            const draggedWord = Array.from(words).find(word => word.innerText === text);
             draggedWord.style.display = 'none';
         } else if (dropzone.classList.contains('dropzone') && dropzone.innerText !== '') {
             const previousText = dropzone.innerText;
             dropzone.innerText = text;
-            const draggedWord = Array.from(document.querySelectorAll('.word')).find(word => word.innerText === text);
+            const draggedWord = Array.from(words).find(word => word.innerText === text);
             draggedWord.style.display = 'none';
 
-            const previousWord = Array.from(document.querySelectorAll('.word')).find(word => word.innerText === previousText);
+            const previousWord = Array.from(words).find(word => word.innerText === previousText);
             if (previousWord) {
                 previousWord.style.display = 'block';
             }
         }
     }
 
-    function checkLevel1() {
+    window.checkLevel1 = function() {
         const level1 = document.getElementById('level1');
         const dropzones = level1.querySelectorAll('.dropzone');
         let correct = true;
@@ -66,27 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Salah! Silakan ulangi.');
             resetLevel(level1);
         }
-    }
-
-    function checkLevel2() {
-        const level2 = document.getElementById('level2');
-        const dropzones = level2.querySelectorAll('.dropzone');
-        let correct = true;
-
-        dropzones.forEach(dropzone => {
-            if (dropzone.innerText !== dropzone.dataset.answer) {
-                correct = false;
-            }
-        });
-
-        if (correct) {
-            alert('Benar! Anda telah menyelesaikan semua tingkatan.');
-            resetLevel(level2);
-        } else {
-            alert('Salah! Silakan ulangi.');
-            resetLevel(level2);
-        }
-    }
+    };
 
     function resetLevel(level) {
         const dropzones = level.querySelectorAll('.dropzone');
@@ -101,8 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function goToMenu() {
-        alert('Kembali ke menu utama.');
-        // Implementasi kembali ke menu
-    }
+    window.goToMenu = function() {
+        window.location.href = 'menu.html'; // Ganti dengan URL menu yang sesuai
+    };
 });

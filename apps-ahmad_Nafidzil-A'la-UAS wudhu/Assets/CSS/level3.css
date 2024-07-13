@@ -60,7 +60,7 @@
 .sentence {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     margin-bottom: 20px;
     direction: rtl; /* Mengatur arah teks menjadi RTL */
 }

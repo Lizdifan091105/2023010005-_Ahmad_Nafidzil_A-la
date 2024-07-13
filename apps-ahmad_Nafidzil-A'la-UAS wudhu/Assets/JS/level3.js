@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function checkLevel1() {
+    window.checkLevel1 = function() {
         const level1 = document.getElementById('level1');
         const dropzones = level1.querySelectorAll('.dropzone');
         let correct = true;
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function checkLevel2() {
+    window.checkLevel2 = function() {
         const level2 = document.getElementById('level2');
         const dropzones = level2.querySelectorAll('.dropzone');
         let correct = true;
@@ -124,3 +124,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+       

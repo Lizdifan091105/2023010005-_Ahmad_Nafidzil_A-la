@@ -2,7 +2,8 @@ body {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    height: 100%;
+    background-color: #f0f0f0; /* Background yang lebih cerah */
 }
 
 .main-container, .game-container {
@@ -10,25 +11,24 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
-    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+    overflow: hidden; 
+    background: linear-gradient(to bottom, #8EC5FC, #E0C3FC); /* Gradien yang lebih lembut */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 header {
     display: flex;
-    
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: aqua; /* Merah */
-    padding: 10px 20px;
+    background-color: #ffcccb; /* Warna yang lebih cerah */
+    padding: 15px 30px; /* Padding yang lebih besar untuk kesan ruang yang lebih besar */
     border-radius: 10px 10px 0 0;
-    color: #611616;;
+    color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -37,22 +37,23 @@ header {
 }
 
 .title {
-    font-size: 1.5em;
+    font-size: 2em; /* Ukuran font lebih besar untuk menonjolkan judul */
     font-weight: bold;
 }
 
 .content {
     max-width: 600px;
     width: 100%;
+    margin-top: 20px; /* Memberikan jarak antara header dan konten */
 }
 
 .tagline {
-    font-size: 1.2em;
-    color: #666;
+    font-size: 1.4em; /* Ukuran font yang lebih besar */
+    color: #555;
 }
 
 .description {
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 20px 0;
 }
 
@@ -60,12 +61,14 @@ header {
     width: 100%;
     max-width: 300px;
     margin: 20px 0;
+    border: 5px solid #fff; /* Border putih untuk memberikan kontras */
+    border-radius: 10px;
 }
 
 .start-game-button {
-    padding: 10px 20px;
-    background-color: aqua;
-    color: #611616;;
+    padding: 12px 24px; /* Padding yang lebih besar untuk kesan tombol yang lebih menonjol */
+    background-color: #ffcccb;
+    color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -73,12 +76,13 @@ header {
 }
 
 .start-game-button a {
-    color: #611616;;
+    color: #333;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .start-game-button:hover {
-    background-color: aquamarine;
+    background-color: #ffb6b9; /* Warna hover yang sedikit berbeda */
 }
 
 footer {
@@ -86,11 +90,12 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #00ffbf; /* Merah */
-    padding: 10px 20px;
+    background-color: #ffcccb;
+    padding: 15px 30px; 
     border-radius: 0 0 10px 10px;
-    color: #611616;
+    color: #333;
     margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .social-media {
@@ -102,7 +107,7 @@ footer {
 }
 
 .social-media img {
-    height: 30px;
+    height: 30px; /* Ukuran ikon yang sama untuk konsistensi */
 }
 
 .developer-profile {
@@ -113,11 +118,12 @@ footer {
 }
 
 .developer-profile a {
-    padding: 10px 20px;
+    padding: 12px 24px; /* Padding yang lebih besar */
     background-color: #4CAF50;
-    color: #611616;;
+    color: #fff; /* Warna teks putih untuk kontras */
     border-radius: 5px;
     text-decoration: none;
+    font-weight: bold;
     transition: background-color 0.4s;
 }
 

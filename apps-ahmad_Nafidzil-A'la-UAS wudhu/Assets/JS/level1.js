@@ -4,7 +4,7 @@ const playerName = localStorage.getItem('playerName');
   }
 
 let matchedPairs = 0;
-const totalPairs = 10;
+const totalPairs = 8;
 
 // Fungsi drag start
 function dragStart(event) {
@@ -41,13 +41,13 @@ function drop(event) {
 function showPopup() {
   const popup = document.getElementById('popup');
   popup.classList.add('show');
-
-  // Tambahkan event listener untuk tombol Next Level
-  document.getElementById('nextLevelButton').addEventListener('click', function() {
-    localStorage.setItem('unlockedLevels', '2'); // Mengatur level berikutnya yang terbuka
-    window.location.href = 'level2.html'; // Ganti dengan URL level berikutnya
+  };
+  document.getElementById('nextLevelButton').addEventListener('click', () => {
+    localStorage.setItem('unlockedLevels', '2'); // Menyimpan level berikutnya yang terbuka
+    window.location.href = 'level2.html'; // Mengarahkan ke level berikutnya
   });
-}
+  
+
 
 // Fungsi untuk inisialisasi timer
 function startTimer(duration) {
