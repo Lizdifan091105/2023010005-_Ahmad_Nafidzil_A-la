@@ -5,8 +5,8 @@ const playerName = localStorage.getItem('playerName');
 
 let matchedPairs = 0;
 const totalPairs = 8;
+let countdown;
 
-// Fungsi drag start
 function dragStart(event) {
   event.dataTransfer.setData('text/plain', event.target.id);
 }
@@ -37,16 +37,7 @@ function drop(event) {
   }
 }
 
-// Fungsi untuk menampilkan popup
-function showPopup() {
-  const popup = document.getElementById('popup');
-  popup.classList.add('show');
-  };
-  document.getElementById('nextLevelButton').addEventListener('click', () => {
-    localStorage.setItem('unlockedLevels', '2'); // Menyimpan level berikutnya yang terbuka
-    window.location.href = 'level2.html'; // Mengarahkan ke level berikutnya
-  });
-  
+
 
 
 // Fungsi untuk inisialisasi timer
@@ -54,18 +45,18 @@ function startTimer(duration) {
   let timer = duration, minutes, seconds;
   const timeDisplay = document.getElementById('timer');
 
-  const countdown = setInterval(() => {
+   countdown = setInterval(() => {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    timeDisplay.textContent = `Time Left: ${minutes}:${seconds}`;
+    timeDisplay.textContent = `Waktu: ${minutes}:${seconds}`;
 
     if (--timer < 0) {
       clearInterval(countdown);
-      alert("Time's up! Try again.");
+      alert("Waktu kamu telah habis. Kamu Kalah");
       location.reload();
     }
   }, 1000);
@@ -73,7 +64,7 @@ function startTimer(duration) {
 
 // Fungsi untuk inisialisasi game
 function initGame() {
-  startTimer(80); // Set timer untuk 80 detik
+  startTimer(80);
 
   const images = document.querySelectorAll('.draggable');
   images.forEach(image => {
@@ -87,6 +78,24 @@ function initGame() {
   });
 
 }
-
+window.goToMenu = function() {
+  window.location.href = 'menu.html'; 
+};
 // Panggil fungsi inisialisasi game saat halaman dimuat
 document.addEventListener('DOMContentLoaded', initGame);
+console.log(localStorage)
+
+// Fungsi untuk menampilkan popup
+function showPopup() {
+  clearInterval(countdown);
+  const popup = document.getElementById('popup');
+  popup.classList.add('show');
+}
+
+document.getElementById('nextLevelButton').addEventListener('click', () => {
+  localStorage.setItem('unlockedLevels', '2'); 
+  window.location.href = 'level2.html';
+  showPopup(); 
+});
+
+  

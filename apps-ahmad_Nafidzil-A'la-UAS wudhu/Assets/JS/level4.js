@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Get player name from localStorage
     const playerName = localStorage.getItem('playerName');
-    document.getElementById('playerNameDisplay').textContent = playerName ? `Welcome, ${playerName}!` : "Welcome, Guest!";
+    document.getElementById('playerNameDisplay').textContent = playerName ? `Nama : ${playerName}` : "Welcome, Guest!";
 
     const words = document.querySelectorAll('.word');
     const dropzones = document.querySelectorAll('.dropzone');
@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Benar! Lanjut ke tingkat 2.');
             level1.style.display = 'none';
             document.getElementById('level2').style.display = 'block';
+            document.getElementById('completionModal').style.display = 'none';
+
         } else {
             alert('Salah! Silakan ulangi.');
             resetLevel(level1);
@@ -83,5 +85,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.goToMenu = function() {
         window.location.href = 'menu.html'; // Ganti dengan URL menu yang sesuai
+    };
+    window.checkLevel2 = function() {
+        const level2 = document.getElementById('level2');
+        const dropzones = level2.querySelectorAll('.dropzone');
+        let correct = true;
+
+        dropzones.forEach(dropzone => {
+            if (dropzone.innerText !== dropzone.dataset.answer) {
+                correct = false;
+            }
+        });
+
+        if (correct) {
+            document.getElementById('completionModal').style.display = 'block';
+            level2.style.display = 'none';
+        } else {
+            alert('Salah! Silakan ulangi.');
+            resetLevel(level2);
+        }
+    };
+
+    function resetLevel(level) {
+        const dropzones = level.querySelectorAll('.dropzone');
+        const words = level.querySelectorAll('.word');
+
+        dropzones.forEach(dropzone => {
+            dropzone.innerText = '';
+        });
+
+        words.forEach(word => {
+            word.style.display = 'block';
+        });
+    }
+
+    window.goToMenu = function() {
+        window.location.href = 'menu.html'; // Ganti dengan URL menu yang sesuai
+    };
+    window.closeModal = function() {
+        document.getElementById('completionModal').style.display = 'none';
     };
 });

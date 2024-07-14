@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Get player name from localStorage
     const playerName = localStorage.getItem('playerName');
-    document.getElementById('playerNameDisplay').textContent = playerName ? `Welcome, ${playerName}!` : "Welcome, Guest!";
+    document.getElementById('playerNameDisplay').textContent = playerName ? `Nama: ${playerName}` : "Welcome, Guest!";
     
     // Your existing drag-and-drop code goes here
     const words = document.querySelectorAll('.word');
@@ -100,6 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
             word.style.display = 'block';
         });
     }
+    window.goToMenu = function() {
+        window.location.href = 'menu.html'; // Ganti dengan URL menu yang sesuai
+    };
 
     function showPopup() {
         const popup = document.getElementById('popup');
@@ -119,9 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         nextLevelButton.addEventListener('click', function() {
-            localStorage.setItem('unlockedLevels', '4');
+            localStorage.setItem('unlockedLevels', 4);
             window.location.href = 'level4.html'; // Ganti dengan URL level berikutnya
         });
     }
 });
-       
+

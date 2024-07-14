@@ -8,9 +8,11 @@
 </head>
 <body>
     <div id="game">
-        <div id="level1" class="level">
+       <div class="level">
+        <span id="playerNameDisplay"></span>
             <h2>Level 3 </h2>
-            <span id="playerNameDisplay"></span>
+        </div>
+        <div id="level1" class="level">
             <p>Geser kotak di bawah ini untuk melengkapi kalimat niat wudhu yang benar</p>
             <div id="sentence1" class="sentence">
                 <span>نَوَيْتُ</span>
@@ -27,15 +29,13 @@
                 <div class="word" draggable="true">ْحَدَثِ اْلاَصْغَر</div>
             </div>
             <div class="button-container">
-                <button onclick="checkLevel1()">Check</button>
+                <button onclick="checkLevel1()">Lanjut</button>
+            
+            <button onclick="goToMenu()">Menu</button>
             </div>
-            <button>
-                <a href="menu.html">Menu</a>
-            </button>
         </div>
 
         <div id="level2" class="level" style="display: none;">
-            <h2>Level 3</h2>
             <p>Geser kotak di bawah ini untuk menyusun kalimat niat wudhu dengan benar:</p>
             <div id="sentence2" class="sentence">
                 <span class="dropzone" data-answer="نَوَيْتُ"></span>
@@ -56,20 +56,22 @@
                 <div class="word" draggable="true">الْوُضُوْءَ</div>
             </div>
             <div class="button-container">
-                <button onclick="checkLevel2()">Check</button>
+                <button onclick="checkLevel2()">Lanjut</button>
+            
+            <button onclick="goToMenu()">Menu</button>
             </div>
-            <button>
-                <a href="menu.html">Menu</a>
-            </button>
         </div>
+        
     </div>
 
     <!-- Popup untuk melanjutkan ke level berikutnya -->
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close">&times;</span>
-            <p>Selamat! Kamu telah berhasil menyusun kalimat niat wudhu dengan benar.</p>
+            <h2>Selamat!</h2>
+            <p>Kamu telah berhasil menyelesaikan level 3</p>
             <button id="nextLevelButton">Lanjut ke Level 4</button>
+            
         </div>
     </div>
 

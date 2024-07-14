@@ -23,14 +23,15 @@ document.addEventListener('DOMContentLoaded',function(){
         window.location.href='level4.html';
     })
 
-    const unlockedLevels= localStorage.getItem('unlockedLevels')||'1';
+    const unlockedLevels= localStorage.getItem('unlockedLevels')||1;
     if(unlockedLevels>=2)level2Button.disabled=false
     if(unlockedLevels>=3)level3Button.disabled=false
-    if(unlockedLevels>=3)level4Button.disabled=false
+    if(unlockedLevels>=4)level4Button.disabled=false
 
-    document.getElementById('resetButton').addEventListener(click,function(){
+    document.getElementById('resetButton').addEventListener('click',function(){
         localStorage.setItem('unlockedLevels','1')
         window.location.reload()
     })
 
 })
+console.log(localStorage)

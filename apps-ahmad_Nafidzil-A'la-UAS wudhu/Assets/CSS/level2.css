@@ -65,15 +65,16 @@ p {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 10px; /* Adjusted padding */
+  padding: 10px; 
   border: 2px solid #333;
   border-radius: 10px;
   background-color: #fff;
   box-sizing: border-box;
-  margin-bottom: 20px; /* Adjusted margin */
+  margin-bottom: 20px; 
 }
 .buttonMenu{
   margin-top: 20px;
+  border-radius: 5px;
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
@@ -81,21 +82,24 @@ p {
   cursor: pointer;
   margin-bottom: 5px;
   text-decoration: none;
-  display: inline-block; /* Memastikan tombol diterapkan dengan benar */
-
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .game-board {
   border-color: #ff5733;
-  padding: 20px; /* Adjusted padding */
-  margin-bottom: 20px; /* Adjusted margin */
+  padding: 20px; 
+  margin-bottom: 20px; 
 }
 
 
 .image-item {
-  width: 130px; /* Adjusted width */
-  height: 137px; /* Adjusted height */
-  margin: 10px; /* Adjusted margin */
+  width: 130px; 
+  height: 137px;
+  margin: 10px; 
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -105,9 +109,9 @@ p {
 }
 
 .drop-zone {
-  width: 130px; /* Adjusted width */
-  height: 137px; /* Adjusted height */
-  margin: 10px; /* Adjusted margin */
+  width: 130px; 
+  height: 137px; 
+  margin: 10px; 
   border: 2px dashed #ccc;
   display: flex;
   justify-content: center;
