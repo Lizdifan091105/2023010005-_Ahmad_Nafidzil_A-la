@@ -1,0 +1,142 @@
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f0f0f0; 
+}
+
+.main-container, .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden; 
+    background: linear-gradient(to bottom, #8EC5FC, #E0C3FC); 
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fcfcfc; 
+    padding: 15px 30px; 
+    border-radius: 10px 10px 0 0;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    padding: 20px;
+    height: 75px;
+    gap: 20px;
+
+}
+.logo_polibang_RPL{
+    display: flex;
+    align-items: center;
+    
+}
+
+.title {
+    font-size: 2.1em;
+    font-weight: bold;
+}
+
+.content {
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px; 
+}
+
+.tagline {
+    font-size: 1.4em;
+    color: #555;
+}
+
+.description {
+    font-size: 1.1em;
+    margin: 20px 0;
+}
+.game-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.game-image {
+    width: 100%;
+    max-width: 100px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.start-game-button {
+    padding: 12px 24px; 
+    background-color: #27ea68;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.start-game-button a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.start-game-button:hover {
+    background-color: #80f459; 
+}
+
+footer {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fcfcfc; 
+    padding: 15px 30px; 
+    border-radius: 0 0 10px 10px;
+    color: #333;
+    margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    height: 30px; 
+}
+
+.developer-profile {
+    padding: 12px 24px; 
+    background-color: #4CAF50;
+    color: #fff; 
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.4s;
+}
+
+
+.developer-profile:hover {
+    background-color: #45a049;
+}
+.copyRight{
+    text-align: right;
+    margin: 0;
+}

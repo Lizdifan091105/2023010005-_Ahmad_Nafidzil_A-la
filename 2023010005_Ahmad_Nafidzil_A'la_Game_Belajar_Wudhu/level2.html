@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 2</title>
+  <link rel="stylesheet" href="Assets/CSS/level2.css">
+</head>
+<body>
+  <div class="game-container"> 
+    <h2>Level 2</h2>
+    <span id="playerNameDisplay"></span>
+    <p>Ayo taruh gambar sesuai dengan urutan wudhu yang benar sebelu waktu habis.</p>
+    <div class="timer">Waktu: <span id="time">80</span> detik</div>
+    <button onclick="goToMenu()"class="buttonMenu">Menu</button>
+    <div id="game-board" class="game-board">
+      <!-- Tempat untuk gambar yang akan dicocokkan -->
+      <div class="drop-zone" data-match="img-0"><span class="drop-zone-number">1</span></div>
+      <div class="drop-zone" data-match="img-1"><span class="drop-zone-number">2</span></div>
+      <div class="drop-zone" data-match="img-2"><span class="drop-zone-number">3</span></div>
+      <div class="drop-zone" data-match="img-3"><span class="drop-zone-number">4</span></div>
+      <div class="drop-zone" data-match="img-4"><span class="drop-zone-number">5</span></div>
+      <div class="drop-zone" data-match="img-5"><span class="drop-zone-number">6</span></div>
+      <div class="drop-zone" data-match="img-6"><span class="drop-zone-number">7</span></div>
+      <div class="drop-zone" data-match="img-7"><span class="drop-zone-number">8</span></div>
+      <div class="drop-zone" data-match="img-8"><span class="drop-zone-number">9</span></div>
+      <div class="drop-zone" data-match="img-9"><span class="drop-zone-number">10</span></div>
+    </div>
+    <div id="image-container" class="image-container">
+      <!-- Daftar gambar yang bisa di-drag -->
+      <img src="Assets/Img/image8.jpg" alt="Image 8" class="image-item" draggable="true" id="img-7">
+      <img src="Assets/Img/image3.jpg" alt="Image 3" class="image-item" draggable="true" id="img-2">
+      <img src="Assets/Img/image10.jpg" alt="Image 10" class="image-item" draggable="true" id="img-9">
+      <img src="Assets/Img/image7.jpg" alt="Image 7" class="image-item" draggable="true" id="img-6">
+      <img src="Assets/Img/image4.jpg" alt="Image 4" class="image-item" draggable="true" id="img-3">
+      <img src="Assets/Img/image2.jpg" alt="Image 2" class="image-item" draggable="true" id="img-1">
+      <img src="Assets/Img/image6.jpg" alt="Image 6" class="image-item" draggable="true" id="img-5">
+      <img src="Assets/Img/image5.jpg" alt="Image 5" class="image-item" draggable="true" id="img-4">
+      <img src="Assets/Img/image1.jpg" alt="Image 1" class="image-item" draggable="true" id="img-0">
+      <img src="Assets/Img/image9.jpg" alt="Image 9" class="image-item" draggable="true" id="img-8">
+    </div>
+  </div>
+  
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Selamat!</h2>
+      <p>Kamu telah berhasil menyelesaikan level 2</p>
+      <button id="nextLevelButton"> Lanjut Ke Level3</button>
+    </div>
+  </div>
+  <script src="Assets/JS/level2.js"></script>
+</body>
+</html>

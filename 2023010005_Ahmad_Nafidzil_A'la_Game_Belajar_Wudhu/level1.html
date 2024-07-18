@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Game</title>
+    <link rel="stylesheet" href="Assets/CSS/level1.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Level 1</h1>
+        <span id="playerNameDisplay"></span>
+        <p>Ayo Cocokan Gambar yang sama dengan cara mendrag and drop gambar yang telah disediakan sebelum waktu habis  </p>
+        <div id="timer">Waktu : 80</div>
+        <button onclick="goToMenu()"class="buttonMenu">menu</button>
+        <div class="grid-container">
+            <div class="question-container">
+                <div class="question">
+                    <img src="Assets/Img/image11.jpg" alt="Question Image 1" class="question-img">
+                </div>
+                <div class="dropzone" id="dropzone1" data-match="img1"></div>
+            </div>
+            <div class="question-container">
+                <div class="question">
+                    <img src="Assets/Img/image12.jpg" alt="Question Image 2" class="question-img">
+                </div>
+                <div class="dropzone" id="dropzone2" data-match="img2"></div>
+            </div>
+            <div class="question-container">
+                <div class="question">
+                    <img src="Assets/Img/image13.jpg" alt="Question Image 3" class="question-img">
+                </div>
+                <div class="dropzone" id="dropzone3" data-match="img3"></div>
+            </div>
+            <div class="question-container">
+                <div class="question">
+                    <img src="Assets/Img/image14.jpg" alt="Question Image 4" class="question-img">
+                </div>
+                <div class="dropzone" id="dropzone4" data-match="img4"></div>
+            </div>
+            <div class="question-container">
+                <div class="question">
+                    <img src="Assets/Img/image15.jpg" alt="Question Image 5" class="question-img">
+                </div>
+                <div class="dropzone" id="dropzone5" data-match="img5"></div>
+            </div>
+            <div class="question-container">
+                <div class="question">
+                    <img src="Assets/Img/image16.jpg" alt="Question Image 6" class="question-img">
+                </div>
+                <div class="dropzone" id="dropzone6" data-match="img6"></div>
+            </div>
+            <div class="question-container">
+                <div class="question">
+                    <img src="Assets/Img/image17.jpg" alt="Question Image 7" class="question-img">
+                </div>
+                <div class="dropzone" id="dropzone7" data-match="img7"></div>
+            </div>
+            <div class="question-container">
+                <div class="question">
+                    <img src="Assets/Img/image18.jpg" alt="Question Image 8" class="question-img">
+                </div>
+                <div class="dropzone" id="dropzone8" data-match="img8"></div>
+            </div>
+  
+ 
+        </div>
+        <div class="image-options">
+            <img src="Assets/Img/image16.jpg" class="draggable" id="img6" draggable="true">
+            <img src="Assets/Img/image14.jpg" class="draggable" id="img4" draggable="true">
+            <img src="Assets/Img/image11.jpg" class="draggable" id="img1" draggable="true">
+            <img src="Assets/Img/image15.jpg" class="draggable" id="img5" draggable="true">
+            <img src="Assets/Img/image17.jpg" class="draggable" id="img7" draggable="true">
+            <img src="Assets/Img/image12.jpg" class="draggable" id="img2" draggable="true">
+            <img src="Assets/Img/image18.jpg" class="draggable" id="img8" draggable="true">
+            <img src="Assets/Img/image13.jpg" class="draggable" id="img3" draggable="true">
+
+    
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup">&times;</span>
+            <h2> Selamat</h2>
+            <p> Kamu telah menyelesaikan level 1</p>
+            <button id="nextLevelButton">Lanjut Level 2</button>
+        </div>
+    </div>
+    
+    <script src="Assets/JS/level1.js"></script>
+</body>
+</html>
